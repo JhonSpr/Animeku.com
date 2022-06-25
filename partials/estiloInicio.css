@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: cursive;
+    text-decoration: none;
+}
+
+/* hedear superior */
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    background: black;
+
+}
+
+.header__superior{
+    max-width:  1200px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+.container__menu{
+    width: 90%;
+    height:  40px;
+    margin-right: 190px;
+    background: #fa0;
+    top: 10px;
+}
+
+
+.menu{
+    max-width: 1300px;
+    margin: -10px 120px;
+    height: 100%;
+    margin-left: 300px;
+}
+
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li:first-child > a {
+    background-image: url("inicio3.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 40px;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    padding: 18px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li >a:hover{
+    transform: scale(2.2);
+    box-shadow: 0px 0px 10px 0px rgba(red, green, blue, alpha);
+}
+
+
+/* submenu */
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: gray;
+    box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    transition: all 300ms ease;
+
+}
+
+
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 60px;
+}
+
+
+
+nav ul li ul:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12 px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display:  block;
+    color: #fa0;
+    padding:  6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+
+}
+
+
+
+.tituloInicio{
+    margin-top: 50px;
+    color: #fff;
+    margin-left: 45%;
+    margin-bottom: 50px;
+}
+
+
+
+.pie_pagina{
+    color: #fa0;
+}
+
+.footer{
+    margin: 40px 0px;
+    background-color: lightgray;
+}
+
+nav ul li ul li a:hover{
+    background: black;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+.bloque{
+    width: 100%;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+
+    background-color: black;  
+    object-fit: cover;
+    margin: 10px 50px;
+
+}
+
+.imagen_tamaño{
+    background-color: black;
+    transition: all 0.5s;
+    padding: 0px 3px;
+    max-height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+   }
+
+
+
+.imagen_tamaño:hover{ 
+    opacity: .7;
+    background-color: #0a0;
+
+}
+
+.tituloAnime{
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: flexbox;
+    font-size: 23px;
+    color: #fa0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.masPopulares{
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    display: flexbox;
+    font-size: 23px;
+    color: #fa0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tituloAnimes{
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    display: flexbox;
+    font-size: 23px;
+    color: #fa0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Primer scroll */
+
+.slider {
+    width: 95vw;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    -webkit-animation: scroll 60s linear infinite;
+    width: calc(200px * 20);
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide > ul > li{
+    width: 200px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 5));
+        transform: translateX(calc(-200px * 5));
+    }
+}
+
+
+
+
+.slider {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    -webkit-animation: scroll 60s linear infinite;
+    width: calc(200px * 20);
+}
+
+.slider .slide1 {
+    width: 200px;
+}
+
+.slider .slide1 img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 5));
+        transform: translateX(calc(-200px * 5));
+    }
+}
+
+
+/* segundo scroll */
+
+
+.slider {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    -webkit-animation: scroll 60s linear infinite;
+    width: calc(200px * 20);
+    transition: all 1s;
+}
+
+.slider .slide2 {
+    width: 200px;
+}
+
+.slider .slide2 img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 5));
+        transform: translateX(calc(-200px * 5));
+    }
+}
+
+
+
+
+
